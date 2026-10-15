@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coș și comandă — Livada lu' Gavril</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fbf6ec">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500..700,50;1,9..144,500,50&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="checkout">
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="breadcrumb"><a href="index.html">Acasă</a> / <a href="magazin.html">Magazin</a> / Comandă</nav>
+      <h1>Finalizează comanda</h1>
+    </div>
+  </section>
+
+  <!-- Coș gol -->
+  <section class="wrap empty" id="cart-empty" hidden>
+    <h2>Coșul tău e gol</h2>
+    <p>Alege un suc din livada noastră și revino aici.</p>
+    <a class="btn btn-primary" href="magazin.html">Mergi la magazin</a>
+  </section>
+
+  <!-- Confirmare -->
+  <section class="wrap success" id="success" hidden>
+    <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+    <span class="kicker">Mulțumim, <span id="ok-name"></span>!</span>
+    <h2>Comanda <span id="ok-nr"></span> a fost înregistrată</h2>
+    <p class="lead" style="margin:0 auto 1.4em">Total de plată: <b id="ok-total"></b>. Te sunăm în cel mai scurt timp să confirmăm livrarea.</p>
+    <a class="btn btn-primary" href="index.html">Înapoi acasă</a>
+    <p class="proposal-note" style="max-width:560px;margin:28px auto 0">Demo: în această propunere comanda nu e trimisă nicăieri. În varianta live, ajunge pe email și în panoul de administrare, iar clientul primește confirmare automată.</p>
+  </section>
+
+  <div class="wrap" id="checkout-wrap">
+    <form class="checkout" id="order-form" novalidate>
+      <div>
+        <div class="panel">
+          <h2><span class="n">1</span> Produsele tale</h2>
+          <div id="cart-lines"></div>
+        </div>
+
+        <div class="panel">
+          <h2><span class="n">2</span> Date de livrare</h2>
+          <div class="fields">
+            <div class="field"><label for="f-name">Nume și prenume</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-phone">Telefon</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9 +\(\)\-]{10,}"></div>
+            <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field full"><label for="f-addr">Adresă (stradă, număr, bloc, apartament)</label><input id="f-addr" name="address" autocomplete="street-address" required></div>
+            <div class="field"><label for="f-city">Localitate</label><input id="f-city" name="city" autocomplete="address-level2" required></div>
+            <div class="field"><label for="f-county">Județ</label>
+              <select id="f-county" name="county" required>
+                <option value="">Alege județul</option>
+                <option>Alba</option><option>Arad</option><option>Argeș</option><option>Bacău</option><option>Bihor</option><option>Bistrița-Năsăud</option><option>Botoșani</option><option>Brăila</option><option>Brașov</option><option>București</option><option>Buzău</option><option>Călărași</option><option>Caraș-Severin</option><option>Cluj</option><option>Constanța</option><option>Covasna</option><option>Dâmbovița</option><option>Dolj</option><option>Galați</option><option>Giurgiu</option><option>Gorj</option><option>Harghita</option><option>Hunedoara</option><option>Ialomița</option><option>Iași</option><option>Ilfov</option><option>Maramureș</option><option>Mehedinți</option><option>Mureș</option><option>Neamț</option><option>Olt</option><option>Prahova</option><option>Sălaj</option><option>Satu Mare</option><option>Sibiu</option><option>Suceava</option><option>Teleorman</option><option>Timiș</option><option>Tulcea</option><option>Vâlcea</option><option>Vaslui</option><option>Vrancea</option>
+              </select>
+            </div>
+            <div class="field full"><label for="f-notes">Observații (opțional)</label><textarea id="f-notes" name="notes" rows="2"></textarea></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2><span class="n">3</span> Livrare și plată</h2>
+          <div class="options" style="margin-bottom:18px">
+            <label class="option"><input type="radio" name="delivery" value="courier" checked>
+              <span class="t"><b>Curier la adresă</b><small>1–3 zile lucrătoare</small></span><span class="p" id="ship-price"></span></label>
+            <label class="option"><input type="radio" name="delivery" value="pickup">
+              <span class="t"><b>Ridicare direct de la fabrică</b><small>Leucușești nr. 472, în timpul programului</small></span><span class="p">Gratuit</span></label>
+          </div>
+          <div class="options">
+            <label class="option"><input type="radio" name="payment" value="card" checked>
+              <span class="t"><b>Card online</b><small>Visa, Mastercard — plată securizată</small></span></label>
+            <label class="option"><input type="radio" name="payment" value="cod">
+              <span class="t"><b>Ramburs / la ridicare</b><small>Plătești când primești sucul</small></span></label>
+          </div>
+          <label class="check"><input type="checkbox" name="terms" required> <span>Am citit și sunt de acord cu <a href="#">Termenii și condițiile</a> și cu <a href="#">Politica de confidențialitate</a>.</span></label>
+          <label class="check"><input type="checkbox" name="news"> <span>Vreau să aflu când e gata sucul din recolta nouă (opțional).</span></label>
+        </div>
+      </div>
+
+      <aside class="summary">
+        <div class="panel">
+          <h2>Sumar</h2>
+          <div id="summary"></div>
+          <button class="btn btn-primary btn-block" type="submit">Plasează comanda</button>
+        </div>
+      </aside>
+    </form>
+  </div>
+</main>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

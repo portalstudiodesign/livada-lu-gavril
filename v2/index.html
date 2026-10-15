@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livada lu' Gavril — Un an într-un pahar</title>
+  <meta name="description" content="Suc 100% natural de mere și mere cu aronia, presat la rece în livada noastră din Leucușești, Suceava. Povestea unui măr, de la floare la pahar.">
+  <meta name="theme-color" content="#14100d">
+  <link rel="icon" href="../assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="v2.css">
+  <script>
+    document.documentElement.classList.add("js");
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("reduced");
+  </script>
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <img class="loader-logo" src="../assets/img/logo.png" alt="">
+    <div class="loader-line"><i></i></div>
+    <div class="loader-meta"><span>Leucușești · Suceava</span><span class="loader-count">000</span></div>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i></i></div>
+<div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <a class="hdr-logo" href="#top" aria-label="Livada lu' Gavril — început"><img src="../assets/img/logo.png" alt="Livada lu' Gavril"></a>
+  <nav class="hdr-nav" aria-label="Principal">
+    <a href="#an">Povestea</a>
+    <a href="#sucuri">Sucurile</a>
+    <a href="#oameni">Noi</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="hdr-actions">
+    <a class="pill pill-ghost hide-sm" href="../magazin.html" data-cursor="Magazin">Magazin</a>
+    <button class="pill pill-solid" type="button" data-open-cart>Coș <span class="cart-n" data-cart-count>0</span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ 01 · HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <!-- desktop: același video, mărit și estompat, ca fundal de ambianță -->
+      <video class="hero-video-bg" data-src="../assets/video/hero-mobil.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <!-- video-ul principal: pe tot ecranul pe mobil, cadru vertical centrat pe desktop -->
+      <video class="hero-video" data-src="../assets/video/hero-mobil.mp4" poster="../assets/video/hero-mobil-poster.jpg" muted loop playsinline preload="none" aria-label="O sticlă de suc de mere Livada lu' Gavril ținută în mână, printre meri"></video>
+    </div>
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <p class="hero-kicker"><span>Leucușești, Suceava</span><span>Din 2017</span></p>
+      <h1 class="hero-title" aria-label="Livada lu’ Gavril">
+        <span class="line"><span class="word" data-split>Livada</span></span>
+        <span class="line line-2"><em class="word" data-split>lu’ Gavril</em></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-sub">Mere din livada noastră, presate la rece.<br>Nimic adăugat. Nimic ascuns.</p>
+        <div class="scroll-cue"><span>Derulează povestea</span><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · MANIFEST ============ -->
+  <section class="manifest" id="manifest">
+    <p class="manifest-text" data-words>
+      Nu adăugăm nimic. Nici zahăr, nici conservanți, nici arome.
+      Doar mere din livada noastră, presate la rece și puse în sticlă,
+      așa cum ni le-a dat pământul.
+    </p>
+  </section>
+
+  <!-- ============ 03 · UN AN ÎNTR-UN PAHAR (horizontal) ============ -->
+  <section class="year" id="an">
+    <div class="year-pin">
+      <div class="year-head">
+        <div class="year-progress"><i></i></div>
+      </div>
+      <div class="year-track">
+        <div class="year-intro">
+          <h2><span class="reveal-line">Un an</span> <span class="reveal-line"><em>într-un pahar</em></span></h2>
+          <p>Fiecare sticlă de suc ține în ea un an întreg din viața livezii. Derulează și urmărește drumul unui măr.</p>
+        </div>
+
+        <article class="chapter">
+          <div class="chapter-img"><img src="../assets/img/floare-mar.jpg" alt="Flori albe de măr pe ram" loading="lazy"></div>
+          <div class="chapter-text">
+            <span class="chapter-n">01</span>
+            <span class="chapter-season">Primăvara</span>
+            <h3>Floarea</h3>
+            <p>Totul începe cu o floare. Livada se trezește, iar fiecare floare de azi e un măr la toamnă.</p>
+          </div>
+        </article>
+
+        <article class="chapter chapter-alt">
+          <div class="chapter-img"><img src="../assets/img/mere-ram.jpg" alt="Mere roșii coapte pe ram" loading="lazy"></div>
+          <div class="chapter-text">
+            <span class="chapter-n">02</span>
+            <span class="chapter-season">Vara</span>
+            <h3>Rodul</h3>
+            <p>Merele cresc încet, la soare, pe dealurile de lângă Fălticeni. Le lăsăm timpul de care au nevoie.</p>
+          </div>
+        </article>
+
+        <article class="chapter">
+          <div class="chapter-img"><img src="../assets/img/recolta-tractor.jpg" alt="Remorcă plină cu lăzi de mere în livadă" loading="lazy"></div>
+          <div class="chapter-text">
+            <span class="chapter-n">03</span>
+            <span class="chapter-season">Toamna</span>
+            <h3>Culesul</h3>
+            <p>Culegem merele când sunt coapte și le aducem la fabrica de lângă livadă.</p>
+          </div>
+        </article>
+
+        <article class="chapter chapter-alt">
+          <div class="chapter-img"><img src="../assets/img/presa.jpg" alt="Fabrica din Leucușești: bazinul de spălare plin cu mere, banda care le urcă spre moară și presa" loading="lazy"></div>
+          <div class="chapter-text">
+            <span class="chapter-n">04</span>
+            <span class="chapter-season">În fabrică</span>
+            <h3>Presa</h3>
+            <p>Spălate, sortate, presate la rece. Fără zahăr și fără conservanți.</p>
+          </div>
+        </article>
+
+        <article class="chapter">
+          <div class="chapter-img"><img src="../assets/img/productie-imbuteliere.jpg" alt="Linia de îmbuteliere cu sticle de suc de mere cu aronia" loading="lazy"></div>
+          <div class="chapter-text">
+            <span class="chapter-n">05</span>
+            <span class="chapter-season">În pahar</span>
+            <h3>Sticla</h3>
+            <p>Îmbuteliem imediat, la sticlă sau în cutii Bag-in-Box de 3 litri. De aici, drumul duce la masa ta.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · FABRICA (triptic video) ============ -->
+  <section class="factory" id="fabrica">
+    <div class="factory-pin">
+      <h2 class="factory-title"><span class="reveal-line">Așa arată</span> <span class="reveal-line"><em>o zi în fabrică</em></span></h2>
+      <div class="triptych">
+        <figure class="tri tri-l"><img src="../assets/img/productie-sortare.jpg" alt="Sortarea merelor pe bandă" loading="lazy"></figure>
+        <figure class="tri tri-c">
+          <video src="../assets/video/proces.mp4" poster="../assets/video/proces-poster.jpg" muted loop playsinline preload="metadata" aria-label="Video: spălarea, presarea și ambalarea merelor"></video>
+        </figure>
+        <figure class="tri tri-r"><img src="../assets/img/bib-umplere.jpg" alt="Umplerea pungilor Bag-in-Box cu suc de mere" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · SUCURILE (color morph) ============ -->
+  <section class="juices" id="sucuri">
+    <div class="juices-stage">
+      <div class="juices-visual">
+        <div class="jv" data-i="0"><img src="../assets/img/mere-sticla.jpg" alt="Sticlă de suc de mere Livada lu' Gavril" loading="lazy"></div>
+        <div class="jv" data-i="1"><img src="../assets/img/mere-aronia-sticla.jpg" alt="Sticlă și pahar cu suc de mere cu aronia" loading="lazy"></div>
+        <div class="jv" data-i="2"><img src="../assets/img/aronia-1l.jpg" alt="Sticle de suc de aronia de 1 litru" loading="lazy"></div>
+        <div class="jv" data-i="3"><img src="../assets/img/dulceata-pachet.jpg" alt="Pachet cu borcane de dulceață de caise și cireșe" loading="lazy"></div>
+        <div class="jv-index"><span class="jv-cur">01</span> / 04</div>
+      </div>
+      <div class="juices-list">
+
+        <article class="juice" data-bg="#f1c76b" data-fg="#2a1a0f" data-family="mere">
+          <figure class="juice-img"><img src="../assets/img/mere-sticla.jpg" alt="Sticlă de suc de mere" loading="lazy"></figure>
+          <h3>Suc de mere</h3>
+          <p class="juice-lead">Dulce-acrișor, exact ca mărul din care vine. Sucul nostru de bază.</p>
+          <div class="juice-variants" data-variants="mere"></div>
+        </article>
+
+        <article class="juice" data-bg="#5a1834" data-fg="#f6e6ec" data-family="mere-aronia">
+          <figure class="juice-img"><img src="../assets/img/mere-aronia-sticla.jpg" alt="Suc de mere cu aronia" loading="lazy"></figure>
+          <h3>Mere <em>cu aronia</em></h3>
+          <p class="juice-lead">Dulceața mărului întâlnește aronia acrișoară. Culoare rubinie, gust plin.</p>
+          <div class="juice-variants" data-variants="mere-aronia"></div>
+        </article>
+
+        <article class="juice" data-bg="#2a0c1a" data-fg="#f3e2ea" data-family="aronia">
+          <figure class="juice-img"><img src="../assets/img/aronia-1l.jpg" alt="Sticle de suc de aronia" loading="lazy"></figure>
+          <h3>Aronia <em>100%</em></h3>
+          <p class="juice-lead">Intensă și acrișoară. Se bea câte puțin: simplu, diluat sau în smoothie.</p>
+          <div class="juice-variants" data-variants="aronia"></div>
+        </article>
+
+        <article class="juice" data-bg="#f3d2b0" data-fg="#3a1a12" data-family="dulceata">
+          <figure class="juice-img"><img src="../assets/img/dulceata-pachet.jpg" alt="Pachet de dulceață fără zahăr" loading="lazy"></figure>
+          <h3>Dulceață <em>fără zahăr</em></h3>
+          <p class="juice-lead">Ediție limitată: 6 borcane de caise și 6 de cireșe, fără zahăr și fără conservanți.</p>
+          <div class="juice-variants" data-variants="dulceata"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · CIFRE ============ -->
+  <section class="stats" id="cifre">
+    <div class="stat"><b data-count="2017" data-from="1990">2017</b><span>anul în care am început</span></div>
+    <div class="stat"><b><span data-count="100">100</span>%</b><span>suc natural</span></div>
+    <div class="stat"><b data-count="0" data-from="99">0</b><span>conservanți</span></div>
+    <div class="stat"><b><span data-count="5" data-decimals="1">5,0</span>★</b><span>pe Google, din 25 de recenzii</span></div>
+  </section>
+
+  <!-- ============ 07 · OAMENII ============ -->
+  <section class="people" id="oameni">
+    <figure class="people-img">
+      <img src="../assets/img/echipa-fabrica.jpg" alt="Echipa Livada lu' Gavril în fabrica de sucuri din Leucușești" loading="lazy">
+    </figure>
+    <div class="people-text">
+      <h2><span class="reveal-line">O afacere</span> <span class="reveal-line"><em>de familie</em></span></h2>
+      <p class="fade-up">Livada Lu Gavril e o afacere de familie din Leucușești, lângă Fălticeni. Avem grijă de livadă tot anul, culegem merele și le presăm chiar noi, în fabrica de lângă livadă.</p>
+      <p class="fade-up">Fiecare sticlă și fiecare cutie trec prin mâinile noastre înainte să ajungă la tine.</p>
+    </div>
+  </section>
+
+  <!-- ============ 08 · PARALLAX COLLAGE ============ -->
+  <section class="collage" aria-label="Imagini din livadă">
+    <figure data-speed="0.75" class="c1"><img src="../assets/img/mar-mana.jpg" alt="Un măr roșu ținut în palmă" loading="lazy"></figure>
+    <figure data-speed="1.25" class="c2"><img src="../assets/img/bib-piramida.jpg" alt="Piramidă de cutii de suc de mere" loading="lazy"></figure>
+    <figure data-speed="0.9" class="c3"><img src="../assets/img/aronia-munte.jpg" alt="Sticlă de aronia ținută deasupra dealurilor" loading="lazy"></figure>
+    <figure data-speed="1.15" class="c4"><img src="../assets/img/gama-traditional.jpg" alt="Sucuri și mere pe un ștergar tradițional" loading="lazy"></figure>
+    <figure data-speed="0.8" class="c5"><img src="../assets/img/sticle-iarba.jpg" alt="Sticle de suc în iarbă" loading="lazy"></figure>
+    <p class="collage-quote"><em>Gustul</em> se face în livadă.<br>Noi doar îl punem în sticlă.</p>
+  </section>
+
+  <!-- ============ 09 · VII CU MERE ============ -->
+  <section class="bring" id="vii-cu-mere">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Vii cu mere <i>—</i> pleci cu suc <i>—</i></span><span>Vii cu mere <i>—</i> pleci cu suc <i>—</i></span>
+      </div>
+    </div>
+    <div class="bring-body">
+      <p class="bring-lead fade-up">Ai livada ta? Adu-ne merele și le transformăm în suc 100% natural, ambalat în cutii Bag-in-Box. Sucul e făcut doar din fructele tale.</p>
+      <ol class="bring-steps">
+        <li class="fade-up"><b>01</b><span>Suni și stabilim ziua</span></li>
+        <li class="fade-up"><b>02</b><span>Aduci merele la fabrică</span></li>
+        <li class="fade-up"><b>03</b><span>Pleci cu suc la cutie</span></li>
+      </ol>
+      <a class="big-btn magnetic" href="tel:+40749396820" data-cursor="Sună"><span>Programează-te · 0749 396 820</span></a>
+    </div>
+  </section>
+
+  <!-- ============ 10 · FINAL ============ -->
+  <footer class="end" id="contact">
+    <div class="end-cta">
+      <h2><span class="reveal-line">Hai să ne</span> <span class="reveal-line"><em>cunoaștem.</em></span></h2>
+      <div class="end-btns">
+        <a class="big-btn big-btn-light magnetic" href="../magazin.html" data-cursor="Magazin"><span>Comandă online</span></a>
+        <a class="big-btn big-btn-line magnetic" href="https://www.google.com/maps/search/?api=1&query=Livada+lu%27+Gavril+Leucu%C8%99e%C8%99ti" target="_blank" rel="noopener" data-cursor="Hartă"><span>Vino la fabrică</span></a>
+      </div>
+    </div>
+    <div class="end-grid">
+      <div><h4>Telefon</h4><a href="tel:+40749396820">0749 396 820</a></div>
+      <div><h4>Email</h4><a href="mailto:livadalugavril@yahoo.com">livadalugavril@yahoo.com</a></div>
+      <div><h4>Adresă</h4><p>Leucușești nr. 472, Ferma,<br>str. Antilești, 725201, jud. Suceava</p></div>
+      <div><h4>Program</h4><p>Luni – Vineri 08–19<br>Sâmbătă 08–16 · Duminică închis</p></div>
+      <div><h4>Social</h4><a href="https://www.facebook.com/livadalugavril/" target="_blank" rel="noopener">Facebook</a><br><a href="https://www.instagram.com/livadalugavril/" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <div class="end-word" aria-hidden="true"><span data-split-end>Livada lu’ Gavril</span></div>
+    <div class="end-legal">
+      <span>© 2017–<span data-year></span> Livada Lu Gavril S.R.L. · CUI 37565241 · J33/806/2017</span>
+      <span><a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener">ANPC · SAL</a> · <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">SOL</a> · <a href="../index.html">Versiunea clasică</a></span>
+    </div>
+  </footer>
+</main>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="drawer-bg" data-close-cart></div>
+<aside class="drawer" aria-label="Coșul de cumpărături" aria-hidden="true">
+  <div class="drawer-head"><h3>Coșul tău</h3><button type="button" class="x" data-close-cart aria-label="Închide">✕</button></div>
+  <div class="drawer-body" data-drawer-body></div>
+  <div class="drawer-foot" data-drawer-foot></div>
+</aside>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="../assets/js/products.js"></script>
+<script src="v2.js"></script>
+</body>
+</html>
