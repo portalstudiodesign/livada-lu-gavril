@@ -73,8 +73,8 @@ function renderChrome() {
       <nav class="nav" id="nav" aria-label="Principal">
         ${navLink("index.html", "Acasă", "home")}
         ${navLink("magazin.html", "Magazin", "shop")}
-        ${navLink("index.html#despre", "Despre noi", "-")}
-        ${navLink("index.html#poveste", "De la livadă la pahar", "-")}
+        ${navLink("index.html#oameni", "Despre noi", "-")}
+        ${navLink("index.html#an", "De la livadă la pahar", "-")}
         ${navLink("index.html#vii-cu-mere", "Vii cu mere", "-")}
         ${navLink("index.html#contact", "Contact", "-")}
       </nav>
@@ -456,6 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
   bindAddButtons();
   bindLineControls($("[data-drawer-body]"));
   const page = document.body.dataset.page;
+  if (page === "classic") pages.home(); // prima pagină clasică (clasic.html) are aceleași secțiuni ca vechea pagină principală
   pages[page]?.();
   renderDrawer(); updateCount(); reveal();
   document.addEventListener("cart:change", () => { renderDrawer(); updateCount(); });

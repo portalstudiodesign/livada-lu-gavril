@@ -1,13 +1,13 @@
 /* ============================================================
    Livada lu' Gavril — v2 · "Un an într-un pahar"
    GSAP + ScrollTrigger + SplitText + Lenis.
-   Coșul folosește aceeași cheie ca v1, deci comanda se finalizează în ../cos.html.
+   Coșul folosește aceeași cheie ca v1, deci comanda se finalizează în cos.html.
    ============================================================ */
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const money = (n) => n.toLocaleString("ro-RO", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " lei";
-  const IMG = (f) => `../assets/img/${f}`;
+  const IMG = (f) => `assets/img/${f}`;
   const byId = (id) => PRODUCTS.find((p) => p.id === id);
   const unitPrice = (p) => isJuice(p) ? money(p.price / p.liters) + " / L" : money(p.price / p.units) + " / " + p.unitLabel;
 
@@ -62,7 +62,7 @@
       </div>`).join("");
     foot.innerHTML = `
       <div class="sum"><span>Subtotal</span><span>${money(sub)}</span></div>
-      <a class="checkout" href="../cos.html">Finalizează comanda</a>
+      <a class="checkout" href="cos.html">Finalizează comanda</a>
       <p class="drawer-note">${left > 0 ? `Mai adaugă ${money(left)} pentru livrare gratuită.` : "Livrarea e gratuită pentru comanda ta."}</p>`;
   }
 
@@ -94,7 +94,7 @@
   $$("[data-variants]").forEach((el) => {
     el.innerHTML = PRODUCTS.filter((p) => p.family === el.dataset.variants).map((p) => `
       <div class="variant">
-        <a class="variant-name" href="../produs.html?id=${p.id}" data-cursor="Detalii">${p.format}<small>${unitPrice(p)}</small></a>
+        <a class="variant-name" href="produs.html?id=${p.id}" data-cursor="Detalii">${p.format}<small>${unitPrice(p)}</small></a>
         <span class="variant-price">${money(p.price)}</span>
         <button class="add" type="button" data-add="${p.id}"><span>Adaugă în coș</span></button>
       </div>`).join("");
@@ -244,7 +244,12 @@
   });
   Promise.all([imgReady, fontsReady, countTween.then()]).then(() => {
     gsap.timeline({
-      onComplete: () => { $(".loader").remove(); fitEndWord(); lenis?.start(); ScrollTrigger.refresh(); },
+      onComplete: () => {
+        $(".loader").remove(); fitEndWord(); lenis?.start(); ScrollTrigger.refresh();
+        // venit dintr-un link cu ancoră (ex. magazin.html → index.html#contact): sari direct la secțiune
+        const target = location.hash && document.querySelector(location.hash);
+        if (target) lenis ? lenis.scrollTo(target, { duration: 1.6 }) : target.scrollIntoView();
+      },
     })
       .to(".loader-inner", { y: -40, opacity: 0, duration: .6, ease: "power3.in" })
       .to(".loader", { clipPath: "inset(0% 0% 100% 0%)", duration: 1.15, ease: "expo.inOut" }, "-=.1")
