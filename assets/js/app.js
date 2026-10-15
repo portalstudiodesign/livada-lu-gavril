@@ -136,6 +136,7 @@ function renderChrome() {
       <div class="footer-bottom">
         <span>© 2017–${new Date().getFullYear()} Livada Lu Gavril S.R.L. · CUI 37565241 · Nr. Reg. Com. J33/806/2017</span>
         <span>Propunere de site — prețurile afișate sunt orientative.</span>
+        <a class="premium-link" href="index.html">✦ Vezi versiunea premium <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </footer>

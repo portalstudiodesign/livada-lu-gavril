@@ -458,6 +458,15 @@ p { margin: 0 0 1em; }
   margin-top: 44px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .12);
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .82rem; color: #a8988b;
 }
+.footer-bottom { align-items: center; }
+.site-footer a.premium-link {
+  display: inline-flex; align-items: center; gap: .45em;
+  padding: .55em 1.1em; border-radius: 999px;
+  border: 1px solid var(--juice); color: var(--juice);
+  font-weight: 700; font-size: .85rem; text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.site-footer a.premium-link:hover { background: var(--juice); color: var(--ink); text-decoration: none; }
 .socials { display: flex; gap: 10px; margin-top: 14px; }
 .socials a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, .08); display: grid; place-items: center; }
 .socials svg { width: 20px; height: 20px; }
